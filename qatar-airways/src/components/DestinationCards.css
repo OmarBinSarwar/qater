@@ -1,0 +1,142 @@
+.destinations-section {
+  background-color: #f0f0f0;
+  padding: 48px 40px 60px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 26px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 28px;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* Card */
+.dest-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.dest-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.14);
+}
+
+/* Card Image */
+.card-image {
+  height: 160px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-deco {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.deco-icon {
+  font-size: 28px;
+  opacity: 0.4;
+  color: white;
+}
+
+.card-badge {
+  background: #1a3a6b;
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.plane-overlay {
+  font-size: 60px;
+  color: rgba(255,255,255,0.1);
+  position: absolute;
+  bottom: -10px;
+  left: -10px;
+  transform: rotate(-15deg);
+  pointer-events: none;
+}
+
+/* Card Body */
+.card-body {
+  padding: 16px;
+  border-top: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #222;
+  line-height: 1.35;
+}
+
+.card-desc {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.4;
+}
+
+.card-cta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #5c0631;
+  font-weight: 500;
+  text-decoration: none;
+  margin-top: 4px;
+  padding-top: 12px;
+  border-top: 1px solid #eee;
+  transition: gap 0.2s;
+}
+
+.card-cta:hover {
+  gap: 10px;
+}
+
+.cta-arrow {
+  font-size: 18px;
+  line-height: 1;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .destinations-section {
+    padding: 32px 16px 40px;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+}

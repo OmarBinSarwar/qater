@@ -1,0 +1,110 @@
+.hero-banner {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  background: linear-gradient(
+    135deg,
+    #2d5a27 0%,
+    #4a7c3f 15%,
+    #6b9e5e 30%,
+    #c8a84b 50%,
+    #d4844a 65%,
+    #a85c2e 80%,
+    #5c3a1a 100%
+  );
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.hero-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(ellipse at 70% 40%, rgba(255,220,100,0.15) 0%, transparent 60%),
+    radial-gradient(ellipse at 20% 60%, rgba(40,80,30,0.4) 0%, transparent 50%);
+}
+
+/* Decorative road/path element */
+.hero-banner::after {
+  content: '';
+  position: absolute;
+  right: 10%;
+  top: 20%;
+  width: 280px;
+  height: 300px;
+  background: linear-gradient(
+    160deg,
+    rgba(210,190,150,0.3) 0%,
+    rgba(180,160,120,0.2) 100%
+  );
+  border-radius: 40% 60% 50% 50%;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.45) 0%,
+    rgba(0,0,0,0.1) 60%,
+    transparent 100%
+  );
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 0 60px;
+  max-width: 520px;
+}
+
+.hero-title {
+  font-size: 38px;
+  font-weight: 700;
+  color: white;
+  line-height: 1.2;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  margin-bottom: 12px;
+}
+
+.hero-subtitle {
+  font-size: 15px;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 28px;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.3);
+}
+
+.hero-btn {
+  background-color: white;
+  color: #5c0631;
+  border: 2px solid white;
+  padding: 12px 32px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+  background-color: transparent;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .hero-banner {
+    height: 300px;
+  }
+  .hero-content {
+    padding: 0 24px;
+  }
+  .hero-title {
+    font-size: 26px;
+  }
+}

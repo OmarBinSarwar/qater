@@ -1,0 +1,311 @@
+.booking-widget-wrapper {
+  background-color: #f0f0f0;
+  padding: 0 40px 40px;
+  display: flex;
+  justify-content: center;
+  margin-top: -10px;
+}
+
+.booking-widget {
+  width: 100%;
+  max-width: 900px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+}
+
+/* Tabs */
+.booking-tabs {
+  display: flex;
+  border-bottom: 1px solid #e0e0e0;
+  background-color: #fafafa;
+}
+
+.tab-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px 12px;
+  border: none;
+  background: transparent;
+  font-size: 13px;
+  color: #666;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s;
+  font-weight: 500;
+}
+
+.tab-btn:hover {
+  color: #5c0631;
+  background-color: #f5f0f2;
+}
+
+.tab-btn.active {
+  color: #5c0631;
+  border-bottom-color: #5c0631;
+  background-color: white;
+  font-weight: 600;
+}
+
+.tab-icon {
+  font-size: 16px;
+}
+
+/* Content */
+.booking-content {
+  padding: 24px 28px;
+}
+
+/* Trip Type Radio */
+.trip-type {
+  display: flex;
+  gap: 28px;
+  margin-bottom: 20px;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #444;
+}
+
+.radio-label input[type="radio"] {
+  display: none;
+}
+
+.radio-custom {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #999;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s;
+  flex-shrink: 0;
+}
+
+.radio-label input[type="radio"]:checked + .radio-custom {
+  border-color: #5c0631;
+  background-color: #5c0631;
+  box-shadow: inset 0 0 0 3px white;
+}
+
+/* Search Fields */
+.search-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.field-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.city-fields {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+}
+
+.input-wrapper {
+  flex: 1;
+  padding: 10px 16px;
+}
+
+.input-wrapper label {
+  display: block;
+  font-size: 10px;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.input-wrapper input,
+.input-wrapper select {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: #333;
+  background: transparent;
+  font-family: inherit;
+}
+
+.input-wrapper input::placeholder {
+  color: #bbb;
+}
+
+/* Swap Button */
+.swap-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #888;
+  cursor: pointer;
+  padding: 0 8px;
+  transition: color 0.2s, transform 0.2s;
+  flex-shrink: 0;
+}
+
+.swap-btn:hover {
+  color: #5c0631;
+  transform: rotate(180deg);
+}
+
+/* Date Fields */
+.date-fields {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+}
+
+.date-fields .input-wrapper + .input-wrapper {
+  border-left: 1px solid #eee;
+}
+
+.passengers-select {
+  cursor: pointer;
+}
+
+/* Bottom Row */
+.booking-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.avios-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #444;
+  cursor: pointer;
+}
+
+.avios-label input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #5c0631;
+}
+
+.booking-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.promo-btn {
+  background: none;
+  border: none;
+  color: #5c0631;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.search-btn {
+  background-color: #8b1a4a;
+  color: white;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+}
+
+.search-btn:hover {
+  background-color: #6b0f37;
+}
+
+/* Promo Field */
+.promo-field {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #eee;
+}
+
+.promo-input {
+  width: 300px;
+  padding: 10px 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+}
+
+.promo-input:focus {
+  border-color: #5c0631;
+}
+
+/* Alt Content */
+.alt-content .city-fields {
+  border: 1px solid #ddd;
+}
+
+.stopover-msg {
+  font-size: 15px;
+  color: #555;
+  padding: 24px 0;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .booking-widget-wrapper {
+    padding: 0 16px 24px;
+  }
+
+  .booking-tabs {
+    overflow-x: auto;
+  }
+
+  .tab-btn {
+    font-size: 11px;
+    padding: 12px 8px;
+  }
+
+  .field-group {
+    flex-direction: column;
+  }
+
+  .city-fields, .date-fields {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .swap-btn {
+    transform: rotate(90deg);
+  }
+
+  .booking-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
